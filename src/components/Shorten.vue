@@ -9,7 +9,6 @@
 </template>
 
 <style lang="scss">
-
 .shorten {
     margin-top: 100px;
     display: flex;
@@ -19,25 +18,26 @@
     &__form {
         transform: translateY(-50%);
         background-color: $color-primary-darkviolet;
-        padding: 2rem;
+        padding: 2.9rem 3.5rem;
         border-radius: 10px;
         background-image: url("../assets/bg-shorten-desktop.svg");
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 1.5rem;
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 1.12rem;
     }
 
     &__input {
         width: 100%;
-        padding: 0.6rem 1.5rem;
+        padding: 1.1rem 1.5rem;
         border-radius: 0.5rem !important;
         border: 1px solid $color-primary-bg;
         font-size: 1em;
 
         &::placeholder {
             color: $color-neutral-grayishviolet;
+            font-family: $font-family-primary;
         }
 
         &:focus {
@@ -50,9 +50,11 @@
             flex: 1;
             font-weight: 700;
             transition: all 0.2s ease-in-out;
+
             &:hover {
                 border: 1px solid lighten($color: $color-primary-cyan, $amount: 20%);
             }
+
             &:active {
                 transform: translateY(5px);
             }

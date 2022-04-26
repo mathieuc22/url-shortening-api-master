@@ -18,22 +18,45 @@
 </template>
 
 <style lang="scss">
-
 .hero {
     display: flex;
     text-align: left;
+    position: relative;
+    margin-bottom: 120px;
+    overflow: hidden;
+
+    &__content {
+        width: 55%;
+        padding: 70px 0px;
+    }
+
+    &__illustration {
+        position: absolute;
+        left: 57.66%;
+    }
+
     &__title {
         color: $color-neutral-verydarkviolet;
-        font-size: 4.3rem;
+        font-size: 4.5rem;
+        letter-spacing: -2.5px;
+        line-height: 5rem;
+    }
+
+    &__text {
+        font-size: 1.24rem;
+        line-height: 2rem;
+    }
+
+    &__getstarted {
+        margin: 35px 0;
     }
 }
-
 </style>
 
 <script setup>
 
 defineProps({
-  title: String
+    title: String
 })
 
 </script>

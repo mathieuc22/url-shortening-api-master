@@ -8,26 +8,7 @@ import Shorten from './components/Shorten.vue';
 </script>
 
 <template>
-  <AppHeader/>
+  <AppHeader />
   <Hero title="More than just shorter links" />
-  <Shorten/>
+  <Shorten />
 </template>
-
-<style lang="scss">
-
-.btn {
-  color: #ffffff;
-	background-color: $color-primary-cyan;
-	border-radius: 2.3em;
-  display: inline-block;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  padding: 0.7em 2.3em;
-  text-decoration: none;
-  &:hover {
-    color: #ffffff;
-	  background-color: lighten($color: $color-primary-cyan, $amount: 20%);
-}
-}
-</style>
