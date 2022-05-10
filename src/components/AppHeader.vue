@@ -2,16 +2,16 @@
     <header>
         <img class="logo" alt="Vue logo" src="../assets/logo.svg" height="50" />
         <nav class="navigation">
-            <ul>
-                <li>Features</li>
-                <li>Pricing</li>
-                <li>Resources</li>
+            <ul class="navlist">
+                <li class="navlist__item">Features</li>
+                <li class="navlist__item">Pricing</li>
+                <li class="navlist__item">Resources</li>
             </ul>
         </nav>
         <nav class="authentication">
-            <ul>
-                <li>Login</li>
-                <li class="btn btn--small">Sign Up</li>
+            <ul class="navlist">
+                <li class="navlist__item">Login</li>
+                <li class="navlist__item btn btn--small">Sign Up</li>
             </ul>
         </nav>
     </header>
@@ -42,18 +42,17 @@ header {
     margin-left: auto;
 }
 
-ul {
+.navlist {
     font-size: 15px;
-    list-style: none;
-}
 
-ul li {
-    display: inline-flex;
-    margin-left: 2rem;
+    &__item {
+        display: inline-flex;
+        margin-left: 2rem;
 
-    &:hover {
-        color: $color-neutral-verydarkviolet;
-        cursor: pointer;
+        &:hover {
+            color: $color-neutral-verydarkviolet;
+            cursor: pointer;
+        }
     }
 }
 </style>
