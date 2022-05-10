@@ -9,7 +9,7 @@
         <ul class="statistics__content">
             <li class="statcard">
                 <div class="statcard__icon">
-                    <img src="src/assets/icon-brand-recognition.svg" alt="Brand Recognition icon">
+                    <img src="../assets/icon-brand-recognition.svg" alt="Brand Recognition icon">
                 </div>
                 <h3 class="statcard__title">Brand Recognition</h3>
                 <div class="statcard__content">Boost your brand recognition with each click. Generic links don't mean a
@@ -17,7 +17,7 @@
             </li>
             <li class="statcard">
                 <div class="statcard__icon">
-                    <img src="src/assets/icon-detailed-records.svg" alt="Detailed Records icon">
+                    <img src="../assets/icon-detailed-records.svg" alt="Detailed Records icon">
                 </div>
                 <h3 class="statcard__title">Detailed Records</h3>
                 <div class="statcard__content">Gain insights into who is clicking your links. Knowing when and where
@@ -25,7 +25,7 @@
             </li>
             <li class="statcard">
                 <div class="statcard__icon">
-                    <img src="src/assets/icon-fully-customizable.svg" alt="Fully Customizable icon">
+                    <img src="../assets/icon-fully-customizable.svg" alt="Fully Customizable icon">
                 </div>
                 <h3 class="statcard__title">Fully Customizable</h3>
                 <div class="statcard__content">Improve brand awareness and content discoverability through customizable
