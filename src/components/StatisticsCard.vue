@@ -1,11 +1,11 @@
 <template>
-    <li class="statcard">
+    <div class="statcard">
         <div class="statcard__icon">
             <img :src="getImagePath(icon)" :alt="title + ' icon'">
         </div>
         <h3 class="statcard__title">{{ title }}</h3>
         <div class="statcard__content">{{ content }}</div>
-    </li>
+    </div>
 </template>
 
 <script setup>
