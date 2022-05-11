@@ -1,12 +1,34 @@
 <template>
     <section class="shorten">
-        <form action="" class="shorten__form">
-            <input type="url" class="shorten__input" name="url" id="url" placeholder="Shorten a link here..." />
+        <form @submit.prevent="fetchAPI" action="" method="post" class="shorten__form">
+            <input v-model="url" type="url" class="shorten__input" name="url" id="url"
+                placeholder="Shorten a link here..." />
             <input type="submit" class="btn shorten__input shorten__input--submit" value="Shorten It!" />
         </form>
-        <div class="shorten__links"></div>
+        <ul class="shorten__links">
+            <li v-for="result in results"  :key="result.code" class="link">
+                <span class="link__original">{{ result.original_link }}</span> <span class="link__shorten">{{ result.full_short_link }}</span> <span class="btn">Copy</span>
+            </li>
+        </ul>
     </section>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const url = ref()
+
+let results = ref([]);
+
+// function to get the short url from the API and append the result to the list
+async function fetchAPI() {
+    let fetchURL = new URL("https://api.shrtco.de/v2/shorten")
+    fetchURL.searchParams.set('url', url.value);
+    const short = await fetch(fetchURL.href).then((r) => r.json())
+    results.value.push(short.result)
+}
+
+</script>
 
 <style lang="scss">
 .shorten {
@@ -14,9 +36,11 @@
     display: flex;
     flex-direction: column;
     background: $color-neutral-bg;
+    padding-bottom: 100px;
 
     &__form {
         transform: translateY(-50%);
+        margin-bottom: -60px;
         background-color: $color-primary-darkviolet;
         padding: 2.9rem 3.5rem;
         border-radius: 10px;
@@ -59,6 +83,32 @@
                 transform: translateY(5px);
             }
         }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.link {
+    background: $color-primary-bg;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+
+    &__original {
+        flex: 1;
+        text-align: left;
+        color: $color-neutral-verydarkviolet;
+    }
+
+    &__shorten {
+        text-align: right;
+        color: $color-primary-cyan;
     }
 }
 </style>
