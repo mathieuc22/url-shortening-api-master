@@ -6,6 +6,7 @@ import Hero from './components/Hero.vue';
 import Shorten from './components/Shorten.vue';
 import Statistics from './components/Statistics.vue';
 import Boost from './components/Boost.vue';
+import AppFooter from './components/AppFooter.vue';
 
 </script>
 
@@ -15,4 +16,5 @@ import Boost from './components/Boost.vue';
   <Shorten />
   <Statistics />
   <Boost />
+  <AppFooter />
 </template>
