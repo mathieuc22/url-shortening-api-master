@@ -28,6 +28,7 @@ import StatisticsCard from './StatisticsCard.vue';
     flex-direction: column;
     align-items: center;
     background: $color-neutral-bg;
+    padding-bottom: 120px;
 
     &__title {
         color: $color-neutral-verydarkviolet;

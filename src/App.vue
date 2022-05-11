@@ -5,6 +5,7 @@ import AppHeader from './components/AppHeader.vue';
 import Hero from './components/Hero.vue';
 import Shorten from './components/Shorten.vue';
 import Statistics from './components/Statistics.vue';
+import Boost from './components/Boost.vue';
 
 </script>
 
@@ -13,4 +14,5 @@ import Statistics from './components/Statistics.vue';
   <Hero title="More than just shorter links" />
   <Shorten />
   <Statistics />
+  <Boost />
 </template>
