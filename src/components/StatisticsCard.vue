@@ -35,6 +35,10 @@ function getImagePath(icon) {
     flex-direction: column;
     z-index: 20;
 
+    @media screen and (max-width: 400px) {
+        text-align: center;
+    }
+
     &:nth-child(1) {
         align-self: flex-start;
     }
@@ -45,6 +49,10 @@ function getImagePath(icon) {
 
     &:nth-child(3) {
         margin-top: 80px;
+
+        @media screen and (max-width: 400px) {
+            margin-top: unset;
+        }
     }
 
     &__icon {
@@ -58,6 +66,11 @@ function getImagePath(icon) {
         position: absolute;
         left: 20px;
         transform: translateY(-100px);
+
+        @media screen and (max-width: 400px) {
+            left: 50%;
+            transform: translateY(-100px) translateX(-50%);
+        }
     }
 
     &__title {

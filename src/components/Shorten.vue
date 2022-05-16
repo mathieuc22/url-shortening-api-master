@@ -6,8 +6,10 @@
             <input type="submit" class="btn shorten__input shorten__input--submit" value="Shorten It!" />
         </form>
         <ul class="shorten__links">
-            <li v-for="result in results"  :key="result.code" class="link">
-                <span class="link__original">{{ result.original_link }}</span> <span class="link__shorten">{{ result.full_short_link }}</span> <span class="btn">Copy</span>
+            <li v-for="result in results" :key="result.code" class="link">
+                <span class="link__original">{{ result.original_link }}</span> <span class="link__shorten">{{
+                        result.full_short_link
+                }}</span> <span class="btn">Copy</span>
             </li>
         </ul>
     </section>
@@ -50,6 +52,12 @@ async function fetchAPI() {
         gap: 1.5rem;
         width: 100%;
         font-size: 1.12rem;
+
+        @media screen and (max-width: 400px) {
+            flex-direction: column;
+            padding: 1.2rem;
+            gap: 1rem;
+        }
     }
 
     &__input {
@@ -58,6 +66,10 @@ async function fetchAPI() {
         border-radius: 0.5rem !important;
         border: 1px solid $color-primary-bg;
         font-size: 1em;
+
+        @media screen and (max-width: 400px) {
+            padding: 0.9rem;
+        }
 
         &::placeholder {
             color: $color-neutral-grayishviolet;

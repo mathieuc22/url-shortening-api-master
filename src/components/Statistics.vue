@@ -28,7 +28,7 @@ import StatisticsCard from './StatisticsCard.vue';
     flex-direction: column;
     align-items: center;
     background: $color-neutral-bg;
-    padding-bottom: 120px;
+    padding-bottom: 7rem;
 
     &__title {
         color: $color-neutral-verydarkviolet;
@@ -47,6 +47,11 @@ import StatisticsCard from './StatisticsCard.vue';
         gap: 2.5%;
         padding-top: 100px;
         position: relative;
+
+        @media screen and (max-width: 400px) {
+            flex-direction: column;
+            gap: 70px;
+        }
     }
 }
 
@@ -57,6 +62,14 @@ import StatisticsCard from './StatisticsCard.vue';
     height: 8px;
     background: $color-primary-cyan;
     z-index: 10;
+
+    @media screen and (max-width: 400px) {
+        top: unset;
+        width: 8px;
+        height: calc(100% - 100px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 </style>
 

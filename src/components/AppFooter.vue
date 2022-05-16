@@ -62,11 +62,23 @@ ul:before {
     justify-content: space-between;
     padding: 50px 165px;
 
+    @media screen and (max-width: 400px) {
+        padding: unset;
+        flex-direction: column;
+    }
+
     &__links {
         display: flex;
         flex: 1;
         justify-content: space-between;
         margin-left: 24%;
+        text-align: left;
+
+        @media screen and (max-width: 400px) {
+            margin-left: unset;
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__social {
@@ -75,14 +87,18 @@ ul:before {
         max-width: 15%;
         margin-left: 50px;
         justify-content: space-between;
-        align-items:flex-start;
+        align-items: center;
+
+        @media screen and (max-width: 400px) {
+            margin-left: unset;
+            margin: auto;
+            max-width: unset;
+        }
+
     }
 }
 
 .links {
-    text-align: left;
     font-size: 0.9em;
 }
-
-
 </style>

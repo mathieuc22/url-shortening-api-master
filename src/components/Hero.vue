@@ -25,14 +25,32 @@
     margin-bottom: 120px;
     overflow: hidden;
 
+    @media screen and (max-width: 400px) {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
     &__content {
         width: 55%;
         padding: 70px 0px;
+
+        @media screen and (max-width: 400px) {
+            padding: unset;
+            width: 100%;
+        }
     }
 
     &__illustration {
         position: absolute;
         left: 57.66%;
+
+        @media screen and (max-width: 400px) {
+            position: unset;
+
+            & img {
+                height: 340px;
+            }
+        }
     }
 
     &__title {
@@ -40,6 +58,11 @@
         font-size: 4.5rem;
         letter-spacing: -2.5px;
         line-height: 5rem;
+
+        @media screen and (max-width: 400px) {
+            font-size: 2.7rem;
+            line-height: 3.5rem;
+        }
     }
 
     &__text {
